@@ -1,8 +1,6 @@
-;;;
-;;;
-;;;
-
-
+;;; package --- ...
+;;; Code:
+;;; Commentary:
 (prelude-require-packages '(dired+
                             neotree))
 

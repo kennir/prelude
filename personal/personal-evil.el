@@ -12,13 +12,14 @@
                             ))
 
 ;;; use , as my leader key
-(global-evil-leader-mode)
 (require 'evil-leader)
-(setq evil-leader/leader "," evil-leader/in-all-states t)
+(global-evil-leader-mode)
+(evil-leader/set-leader ",")
+
+
 ;;config for evil-matchit
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
-
 
 ;;evil nerd commemter configs
 (evilnc-default-hotkeys)

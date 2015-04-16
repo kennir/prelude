@@ -1,6 +1,6 @@
-;;;
-;;;
-;;;
+;;; package --- ...
+;;; Code:
+;;; Commentary:
 
 
 (prelude-require-packages '(lua-mode

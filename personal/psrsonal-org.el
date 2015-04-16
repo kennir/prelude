@@ -4,8 +4,8 @@
 
 
 
-(prelude-require-packages '(org-bullets
-                            ))
+(prelude-require-packages '(org-bullets))
+
 
 
 (require 'org-bullets)
@@ -16,16 +16,20 @@
 (appt-activate 1)
 (setq diary-file (concat org-directory "/diary.org"))
 (setq org-default-notes-file (concat org-directory "/note.org"))
-
+(global-set-key "\C-cc" 'org-capture)
 ;; agenda files
 (setq org-agenda-files (file-expand-wildcards (concat org-directory "/*.org")))
 
 
 (setq org-capture-templates
-      '(("p" "Project" entry (file+headline (concat org-directory "/project.org") "project") "** TODO %?\n %i\n  %a")
-        ("i" "Inbox" entry (file (concat org-directory "/inbox.org")) "** TODO %? %^G %i\n %a")
-        ("s" "Personal" entry (file+headline (concat org-directory "/personal.org") "personal") "** TODO %? %^G\n %a")
-        ("n" "Note" entry (file+datetree (concat org-directory "/note.org")) "* %?\nEntered on %U\n %i\n  %a")
+      '(("p" "Project" entry (file+headline (concat org-directory "/project.org") "project")
+         "** TODO %?\n   SCHEDULED:%^t")
+        ("i" "Inbox" entry (file (concat org-directory "/inbox.org"))
+         "** TODO %? %^G\n  SCHEDULED:%^t\n   %a")
+        ("s" "Personal" entry (file+headline (concat org-directory "/personal.org") "personal")
+         "** TODO %? %^G\n  SCHEDULED:%^t\n   %a")
+        ("n" "Note" entry (file+datetree (concat org-directory "/note.org"))
+         "* %?\nEntered on %U\n %i\n  %a")
 ))
 
 ;; show diary in calendar
