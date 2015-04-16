@@ -11,7 +11,6 @@
       (width . 140)
       (height . 80))))
  '(echo-keystrokes 0.1)
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(global-linum-mode t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
  '(ns-pop-up-frames nil)

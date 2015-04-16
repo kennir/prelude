@@ -11,6 +11,6 @@
 (require 'flycheck-pyflakes)
 (add-hook 'python-mode-hook 'flycheck-mode)
 
-
 (require 'yasnippet)
-(yas-global-mode 1)
+(add-to-list 'yas/root-directory "~/.emacs.d/snippets")
+(yas/initialize)

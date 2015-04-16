@@ -5,7 +5,8 @@
 (prelude-require-packages '(ido-vertical-mode
                             chinese-fonts-setup
                             sublimity
-                            powerline-evil))
+                            powerline-evil
+                            smex))
 
 (require 'ido)
 (require 'ido-vertical-mode)
@@ -31,3 +32,11 @@
 
 (require 'powerline-evil)
 (powerline-evil-vim-color-theme)
+
+
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
