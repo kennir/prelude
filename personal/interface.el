@@ -34,6 +34,10 @@
 (powerline-evil-vim-color-theme)
 
 
+;;; 关闭whitespace模式
+(setq prelude-whitespace nil)
+
+
 (require 'smex)
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)

@@ -14,7 +14,7 @@
 ;; My org directory
 (setq org-directory "~/Documents/emacs/org")
 (appt-activate 1)
-(setq diary-file (concat org-directory "/diary.org"))
+(setq diary-file (concat org-directory "/diary.org.gpg"))
 (setq org-default-notes-file (concat org-directory "/note.org"))
 (global-set-key "\C-cc" 'org-capture)
 ;; agenda files
