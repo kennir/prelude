@@ -7,9 +7,9 @@
  '(company-global-modes (quote (not\ markdown-mode)))
  '(default-frame-alist
     (quote
-     ((vertical-scroll-bars)
-      (width . 140)
-      (height . 80))))
+     ((width . 140)
+      (height . 72)
+      (vertical-scroll-bars))))
  '(echo-keystrokes 0.1)
  '(global-linum-mode t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
