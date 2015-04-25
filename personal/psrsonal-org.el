@@ -4,15 +4,18 @@
 
 
 
-(prelude-require-packages '(org-bullets))
+(prelude-require-packages '(org-bullets
+                            org-autolist
+                            ))
 
 
 
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+(add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
 
 ;; My org directory
-(setq org-directory "~/Documents/emacs/org")
+(setq org-directory "~/Documents/emacs/gtd")
 (appt-activate 1)
 (setq diary-file (concat org-directory "/diary.org.gpg"))
 (setq org-default-notes-file (concat org-directory "/note.org"))
@@ -36,6 +39,7 @@
 (setq view-diary-entries-initially t
       mark-diary-entries-in-calendar t
       number-of-diary-entries 7)
+(add-hook 'today-visible-calendar-hook 'calendar-mark-today)
 
 
 (setq org-todo-keywords
@@ -64,3 +68,6 @@
                       ("@document" . ?D)
                       (:endgroup . nil)
                       ))
+
+
+

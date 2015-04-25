@@ -5,8 +5,9 @@
 (prelude-require-packages '(ido-vertical-mode
                             chinese-fonts-setup
                             sublimity
-                            powerline-evil
-                            smex))
+                            smex
+                            evil-nerd-commenter
+                            ))
 
 (require 'ido)
 (require 'ido-vertical-mode)
@@ -24,14 +25,22 @@
 
 (require 'chinese-fonts-setup)
 
+;; disable ring
+(setq ring-bell-function 'ignore)
+
 
 
 (require 'sublimity-scroll)
 (sublimity-mode 1)
 
 
-(require 'powerline-evil)
-(powerline-evil-vim-color-theme)
+;; (require 'powerline-evil)
+;; (powerline-evil-vim-color-theme)
+
+;; (require 'powerline)
+;; (powerline-default-theme)
+
+
 
 
 ;;; 关闭whitespace模式
@@ -44,3 +53,7 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+
+;;; evil nerd commenter
+(evilnc-default-hotkeys)

@@ -5,11 +5,9 @@
  ;; If there is more than one, they won't work right.
  '(cfs--fontsize-steps (quote (5 4 4)) t)
  '(company-global-modes (quote (not\ markdown-mode)))
- '(default-frame-alist
-    (quote
-     ((width . 140)
-      (height . 72)
-      (vertical-scroll-bars))))
+ '(cursor-type (quote bar))
+ '(default-frame-alist (quote ((width . 140) (height . 72))))
+ '(diary-display-function (quote diary-fancy-display))
  '(echo-keystrokes 0.1)
  '(global-linum-mode t)
  '(initial-frame-alist (quote ((vertical-scroll-bars))))
