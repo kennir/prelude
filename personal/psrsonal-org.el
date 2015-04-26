@@ -4,15 +4,7 @@
 
 
 
-(prelude-require-packages '(org-bullets
-                            org-autolist
-                            ))
-
-
-
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-(add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
+(prelude-require-packages '(deft))
 
 ;; My org directory
 (setq org-directory "~/Documents/emacs/gtd")
@@ -70,4 +62,8 @@
                       ))
 
 
-
+;; DEFT 
+(setq deft-extension "md")
+(setq deft-directory "~/Documents/emacs/notes")
+(setq deft-text-mode 'markdown-mode)
+(setq deft-use-filename-as-title t)
