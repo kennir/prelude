@@ -7,7 +7,7 @@
 (prelude-require-packages '(deft))
 
 ;; My org directory
-(setq org-directory "~/Documents/emacs/gtd")
+(setq org-directory "~/Documents/PlainText/gtd")
 (appt-activate 1)
 (setq diary-file (concat org-directory "/diary.org.gpg"))
 (setq org-default-notes-file (concat org-directory "/note.org"))
@@ -64,6 +64,6 @@
 
 ;; DEFT 
 (setq deft-extension "md")
-(setq deft-directory "~/Documents/emacs/notes")
+(setq deft-directory "~/Documents/PlainText/notes")
 (setq deft-text-mode 'markdown-mode)
 (setq deft-use-filename-as-title t)

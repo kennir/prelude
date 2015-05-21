@@ -12,8 +12,8 @@
 (server-mode)
 
 ;;; 启动后直接进入Agenda
-(add-hook 'after-init-hook 'org-agenda-list)
-(delete-other-windows)
+;; (add-hook 'after-init-hook 'org-agenda-list)
+;; (delete-other-windows)
 
 (require 'flycheck-pyflakes)
 (add-hook 'python-mode-hook 'flycheck-mode)

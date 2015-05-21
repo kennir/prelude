@@ -6,11 +6,19 @@
  '(cfs--fontsize-steps (quote (5 4 4)) t)
  '(company-global-modes (quote (not\ markdown-mode)))
  '(cursor-type (quote bar))
- '(default-frame-alist (quote ((width . 140) (height . 72))))
+ '(default-frame-alist
+    (quote
+     ((width . 157)
+      (height . 73)
+      (vertical-scroll-bars))))
  '(diary-display-function (quote diary-fancy-display))
  '(echo-keystrokes 0.1)
  '(global-linum-mode t)
- '(initial-frame-alist (quote ((vertical-scroll-bars))))
+ '(initial-frame-alist
+   (quote
+    ((vertical-scroll-bars)
+     (height . 73)
+     (width . 157))))
  '(ns-pop-up-frames nil)
  '(projectile-switch-project-action (quote projectile-dired))
  '(python-check-command "flake8")
